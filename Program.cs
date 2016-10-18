@@ -53,19 +53,26 @@ namespace ConsoleApplication
         {
             using (cons)
             {
-                var response = await cons.GetStringAsync("api/Kraken/GetById/22a877aa-c291-4ba8-88be-634bd181bb94");               
+                var response = await cons.GetStringAsync("api/Kraken/GetById/22a877aa-c291-4ba8-88be-634bd181bb94");
 
                 if (response != null)
                 {
-                    var item = JsonConvert.DeserializeObject<Item>(response);
-                    Console.WriteLine("\n");
-                    Console.WriteLine("---------------------Calling Get Operation------------------------");
-                    Console.WriteLine("\n");
-                    Console.WriteLine("ItemId    Name          ReservedBy");
-                    Console.WriteLine("-----------------------------------------------------------");
-                    Console.WriteLine("{0}\t{1}\t\t{2}", item.ItemId, item.Name, item.ReservedBy);
-                    Console.ReadLine();
-                }               
+                    try
+                    {
+                        var item = JsonConvert.DeserializeObject<Item>(response);
+                        Console.WriteLine("\n");
+                        Console.WriteLine("---------------------Calling Get Operation------------------------");
+                        Console.WriteLine("\n");
+                        Console.WriteLine("ItemId    Name          ReservedBy");
+                        Console.WriteLine("-----------------------------------------------------------");
+                        Console.WriteLine("{0}\t{1}\t\t{2}", item.ItemId, item.Name, item.ReservedBy);
+                        
+                    }
+                    catch (Exception ex)
+                    {
+
+                    }
+                }
             }
         }
     }
