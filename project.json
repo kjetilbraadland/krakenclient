@@ -5,8 +5,8 @@
     "emitEntryPoint": true
   },
   "dependencies": {   
-     "System.Net.Http": "4.1.0",
-    "Microsoft.AspNet.WebApi.Client": "5.2.3"
+     "Microsoft.NETCore.Portable.Compatibility": "1.0.0"
+     ,"Newtonsoft.Json": "8.0.2"
   },
   "frameworks": {
     "netcoreapp1.0": {
@@ -16,7 +16,7 @@
           "version": "1.0.1"
         }
       },
-      "imports": ["dnxcore50", "portable-net451+win8"]
+      "imports": ["dnxcore50"]
     }
   }
 }

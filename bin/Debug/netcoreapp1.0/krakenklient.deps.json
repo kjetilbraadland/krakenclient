@@ -1,0 +1,67 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v1.0",
+    "signature": "7b89e9daf31206307738ec284394f75a0919e604"
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v1.0": {
+      "krakenklient/1.0.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Portable.Compatibility": "1.0.0",
+          "Newtonsoft.Json": "8.0.2"
+        },
+        "runtime": {
+          "krakenklient.dll": {}
+        }
+      },
+      "Microsoft.NETCore.Portable.Compatibility/1.0.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Runtime": "1.0.0"
+        },
+        "runtime": {
+          "lib/dnxcore50/System.ComponentModel.DataAnnotations.dll": {},
+          "lib/dnxcore50/System.Core.dll": {},
+          "lib/dnxcore50/System.Net.dll": {},
+          "lib/dnxcore50/System.Numerics.dll": {},
+          "lib/dnxcore50/System.Runtime.Serialization.dll": {},
+          "lib/dnxcore50/System.ServiceModel.Web.dll": {},
+          "lib/dnxcore50/System.ServiceModel.dll": {},
+          "lib/dnxcore50/System.Windows.dll": {},
+          "lib/dnxcore50/System.Xml.Linq.dll": {},
+          "lib/dnxcore50/System.Xml.Serialization.dll": {},
+          "lib/dnxcore50/System.Xml.dll": {},
+          "lib/dnxcore50/System.dll": {}
+        }
+      },
+      "Microsoft.NETCore.Runtime/1.0.0": {},
+      "Newtonsoft.Json/8.0.2": {
+        "runtime": {
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Newtonsoft.Json.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "krakenklient/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.NETCore.Portable.Compatibility/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-5/IFqf2zN1jzktRJitxO+5kQ+0AilcIbPvSojSJwDG3cGNSMZg44LXLB5E9RkSETE0Wh4QoALdNh1koKoF7/mA=="
+    },
+    "Microsoft.NETCore.Runtime/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-AjaMNpXLW4miEQorIqyn6iQ+BZBId6qXkhwyeh1vl6kXLqosZusbwmLNlvj/xllSQrd3aImJbvlHusam85g+xQ=="
+    },
+    "Newtonsoft.Json/8.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-e5yWmEfu68rmtG431zl9N/7PlNKQDIuiDW5MHlEFAZcecakcxrIGnKqrPAtWNILzK2oNanRB5cD150MYhECK3g=="
+    }
+  }
+}
