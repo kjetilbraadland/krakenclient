@@ -4,7 +4,10 @@
     "debugType": "portable",
     "emitEntryPoint": true
   },
-  "dependencies": {},
+  "dependencies": {   
+     "System.Net.Http": "4.1.0",
+    "Microsoft.AspNet.WebApi.Client": "5.2.3"
+  },
   "frameworks": {
     "netcoreapp1.0": {
       "dependencies": {
@@ -13,7 +16,7 @@
           "version": "1.0.1"
         }
       },
-      "imports": "dnxcore50"
+      "imports": ["dnxcore50", "portable-net451+win8"]
     }
   }
 }

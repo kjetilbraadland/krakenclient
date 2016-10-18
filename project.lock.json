@@ -15,6 +15,34 @@
           }
         }
       },
+      "Microsoft.AspNet.WebApi.Client/5.2.3": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Net.Http": "2.2.22",
+          "Newtonsoft.Json": "6.0.4"
+        },
+        "compile": {
+          "lib/portable-wp8+netcore45+net45+wp81+wpa81/System.Net.Http.Formatting.dll": {}
+        },
+        "runtime": {
+          "lib/portable-wp8+netcore45+net45+wp81+wpa81/System.Net.Http.Formatting.dll": {}
+        }
+      },
+      "Microsoft.Bcl/1.1.9": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Bcl.Build": "1.0.14"
+        },
+        "compile": {
+          "lib/portable-net45+win8+wpa81/_._": {}
+        },
+        "runtime": {
+          "lib/portable-net45+win8+wpa81/_._": {}
+        }
+      },
+      "Microsoft.Bcl.Build/1.0.14": {
+        "type": "package"
+      },
       "Microsoft.CodeAnalysis.Analyzers/1.1.0": {
         "type": "package"
       },
@@ -117,6 +145,21 @@
         },
         "runtime": {
           "lib/netstandard1.3/_._": {}
+        }
+      },
+      "Microsoft.Net.Http/2.2.22": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Bcl": "1.1.9",
+          "Microsoft.Bcl.Build": "1.0.14"
+        },
+        "compile": {
+          "lib/portable-net45+win8/System.Net.Http.Extensions.dll": {},
+          "lib/portable-net45+win8/System.Net.Http.Primitives.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+win8/System.Net.Http.Extensions.dll": {},
+          "lib/portable-net45+win8/System.Net.Http.Primitives.dll": {}
         }
       },
       "Microsoft.NETCore.App/1.0.1": {
@@ -326,6 +369,15 @@
           "System.Xml.XDocument": "4.0.11"
         }
       },
+      "Newtonsoft.Json/6.0.4": {
+        "type": "package",
+        "compile": {
+          "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {}
+        }
+      },
       "runtime.native.System/4.0.0": {
         "type": "package",
         "dependencies": {
@@ -428,6 +480,9 @@
         },
         "compile": {
           "ref/netstandard1.3/System.Collections.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+win8+wp8+wpa81/_._": {}
         }
       },
       "System.Collections.Concurrent/4.0.12": {
@@ -448,7 +503,7 @@
           "ref/netstandard1.3/System.Collections.Concurrent.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.3/_._": {}
+          "lib/netstandard1.3/System.Collections.Concurrent.dll": {}
         }
       },
       "System.Collections.Immutable/1.2.0": {
@@ -526,6 +581,9 @@
         },
         "compile": {
           "ref/netstandard1.3/System.Diagnostics.Debug.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+win8+wp8+wpa81/_._": {}
         }
       },
       "System.Diagnostics.DiagnosticSource/4.0.0": {
@@ -541,7 +599,7 @@
           "lib/netstandard1.3/System.Diagnostics.DiagnosticSource.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.3/_._": {}
+          "lib/netstandard1.3/System.Diagnostics.DiagnosticSource.dll": {}
         }
       },
       "System.Diagnostics.FileVersionInfo/4.0.0": {
@@ -628,6 +686,9 @@
         },
         "compile": {
           "ref/netstandard1.0/System.Diagnostics.Tools.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+win8+wp8+wpa81/_._": {}
         }
       },
       "System.Diagnostics.Tracing/4.1.0": {
@@ -639,6 +700,9 @@
         },
         "compile": {
           "ref/netstandard1.5/System.Diagnostics.Tracing.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+win8+wpa81/_._": {}
         }
       },
       "System.Dynamic.Runtime/4.0.11": {
@@ -676,6 +740,9 @@
         },
         "compile": {
           "ref/netstandard1.3/System.Globalization.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+win8+wp8+wpa81/_._": {}
         }
       },
       "System.Globalization.Calendars/4.0.1": {
@@ -704,7 +771,11 @@
           "ref/netstandard1.3/System.Globalization.Extensions.dll": {}
         },
         "runtimeTargets": {
-          "runtimes/win/lib/netstandard1.3/_._": {
+          "runtimes/unix/lib/netstandard1.3/System.Globalization.Extensions.dll": {
+            "assetType": "runtime",
+            "rid": "unix"
+          },
+          "runtimes/win/lib/netstandard1.3/System.Globalization.Extensions.dll": {
             "assetType": "runtime",
             "rid": "win"
           }
@@ -721,6 +792,9 @@
         },
         "compile": {
           "ref/netstandard1.5/System.IO.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+win8+wp8+wpa81/_._": {}
         }
       },
       "System.IO.Compression/4.1.0": {
@@ -743,6 +817,9 @@
         },
         "compile": {
           "ref/netstandard1.3/System.IO.Compression.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+win8+wpa81/_._": {}
         },
         "runtimeTargets": {
           "runtimes/win/lib/netstandard1.3/_._": {
@@ -796,7 +873,7 @@
           "ref/netstandard1.3/System.IO.FileSystem.Primitives.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.3/_._": {}
+          "lib/netstandard1.3/System.IO.FileSystem.Primitives.dll": {}
         }
       },
       "System.IO.FileSystem.Watcher/4.0.0": {
@@ -887,7 +964,7 @@
           "ref/netstandard1.6/System.Linq.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.6/_._": {}
+          "lib/netstandard1.6/System.Linq.dll": {}
         }
       },
       "System.Linq.Expressions/4.1.0": {
@@ -991,8 +1068,15 @@
         "compile": {
           "ref/netstandard1.3/System.Net.Http.dll": {}
         },
+        "runtime": {
+          "lib/portable-net45+win8+wpa81/_._": {}
+        },
         "runtimeTargets": {
-          "runtimes/win/lib/netstandard1.3/_._": {
+          "runtimes/unix/lib/netstandard1.6/System.Net.Http.dll": {
+            "assetType": "runtime",
+            "rid": "unix"
+          },
+          "runtimes/win/lib/netstandard1.3/System.Net.Http.dll": {
             "assetType": "runtime",
             "rid": "win"
           }
@@ -1036,6 +1120,9 @@
         },
         "compile": {
           "ref/netstandard1.3/System.Net.Primitives.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+win8+wp8+wpa81/_._": {}
         }
       },
       "System.Net.Requests/4.0.11": {
@@ -1057,6 +1144,9 @@
         },
         "compile": {
           "ref/netstandard1.3/System.Net.Requests.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+win8+wp8+wpa81/_._": {}
         },
         "runtimeTargets": {
           "runtimes/win/lib/netstandard1.3/_._": {
@@ -1178,6 +1268,9 @@
         },
         "compile": {
           "ref/netstandard1.5/System.Reflection.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+win8+wp8+wpa81/_._": {}
         }
       },
       "System.Reflection.DispatchProxy/4.0.1": {
@@ -1256,6 +1349,9 @@
         },
         "compile": {
           "ref/netstandard1.0/System.Reflection.Extensions.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+win8+wp8+wpa81/_._": {}
         }
       },
       "System.Reflection.Metadata/1.3.0": {
@@ -1293,6 +1389,9 @@
         },
         "compile": {
           "ref/netstandard1.0/System.Reflection.Primitives.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+win8+wp8+wpa81/_._": {}
         }
       },
       "System.Reflection.TypeExtensions/4.1.0": {
@@ -1335,6 +1434,9 @@
         },
         "compile": {
           "ref/netstandard1.0/System.Resources.ResourceManager.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+win8+wp8+wpa81/_._": {}
         }
       },
       "System.Runtime/4.1.0": {
@@ -1345,6 +1447,9 @@
         },
         "compile": {
           "ref/netstandard1.5/System.Runtime.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+win8+wp80+wpa81/_._": {}
         }
       },
       "System.Runtime.Extensions/4.1.0": {
@@ -1356,6 +1461,9 @@
         },
         "compile": {
           "ref/netstandard1.5/System.Runtime.Extensions.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+win8+wp8+wpa81/_._": {}
         }
       },
       "System.Runtime.Handles/4.0.1": {
@@ -1381,6 +1489,9 @@
         },
         "compile": {
           "ref/netstandard1.5/System.Runtime.InteropServices.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+win8+wpa81/_._": {}
         }
       },
       "System.Runtime.InteropServices.RuntimeInformation/4.0.0": {
@@ -1430,7 +1541,7 @@
           "ref/netstandard1.1/System.Runtime.Numerics.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.3/_._": {}
+          "lib/netstandard1.3/System.Runtime.Numerics.dll": {}
         }
       },
       "System.Security.Claims/4.0.1": {
@@ -1472,7 +1583,11 @@
           "ref/netstandard1.6/System.Security.Cryptography.Algorithms.dll": {}
         },
         "runtimeTargets": {
-          "runtimes/win/lib/netstandard1.6/_._": {
+          "runtimes/unix/lib/netstandard1.6/System.Security.Cryptography.Algorithms.dll": {
+            "assetType": "runtime",
+            "rid": "unix"
+          },
+          "runtimes/win/lib/netstandard1.6/System.Security.Cryptography.Algorithms.dll": {
             "assetType": "runtime",
             "rid": "win"
           }
@@ -1497,7 +1612,11 @@
           "ref/netstandard1.6/_._": {}
         },
         "runtimeTargets": {
-          "runtimes/win/lib/netstandard1.6/_._": {
+          "runtimes/unix/lib/netstandard1.6/System.Security.Cryptography.Cng.dll": {
+            "assetType": "runtime",
+            "rid": "unix"
+          },
+          "runtimes/win/lib/netstandard1.6/System.Security.Cryptography.Cng.dll": {
             "assetType": "runtime",
             "rid": "win"
           }
@@ -1524,7 +1643,11 @@
           "ref/netstandard1.3/_._": {}
         },
         "runtimeTargets": {
-          "runtimes/win/lib/netstandard1.3/_._": {
+          "runtimes/unix/lib/netstandard1.3/System.Security.Cryptography.Csp.dll": {
+            "assetType": "runtime",
+            "rid": "unix"
+          },
+          "runtimes/win/lib/netstandard1.3/System.Security.Cryptography.Csp.dll": {
             "assetType": "runtime",
             "rid": "win"
           }
@@ -1550,7 +1673,11 @@
           "ref/netstandard1.3/System.Security.Cryptography.Encoding.dll": {}
         },
         "runtimeTargets": {
-          "runtimes/win/lib/netstandard1.3/_._": {
+          "runtimes/unix/lib/netstandard1.3/System.Security.Cryptography.Encoding.dll": {
+            "assetType": "runtime",
+            "rid": "unix"
+          },
+          "runtimes/win/lib/netstandard1.3/System.Security.Cryptography.Encoding.dll": {
             "assetType": "runtime",
             "rid": "win"
           }
@@ -1577,10 +1704,10 @@
           "ref/netstandard1.6/_._": {}
         },
         "runtime": {
-          "lib/netstandard1.6/_._": {}
+          "lib/netstandard1.6/System.Security.Cryptography.OpenSsl.dll": {}
         },
         "runtimeTargets": {
-          "runtimes/unix/lib/netstandard1.6/_._": {
+          "runtimes/unix/lib/netstandard1.6/System.Security.Cryptography.OpenSsl.dll": {
             "assetType": "runtime",
             "rid": "unix"
           }
@@ -1601,7 +1728,7 @@
           "ref/netstandard1.3/System.Security.Cryptography.Primitives.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.3/_._": {}
+          "lib/netstandard1.3/System.Security.Cryptography.Primitives.dll": {}
         }
       },
       "System.Security.Cryptography.X509Certificates/4.1.0": {
@@ -1637,7 +1764,11 @@
           "ref/netstandard1.4/System.Security.Cryptography.X509Certificates.dll": {}
         },
         "runtimeTargets": {
-          "runtimes/win/lib/netstandard1.6/_._": {
+          "runtimes/unix/lib/netstandard1.6/System.Security.Cryptography.X509Certificates.dll": {
+            "assetType": "runtime",
+            "rid": "unix"
+          },
+          "runtimes/win/lib/netstandard1.6/System.Security.Cryptography.X509Certificates.dll": {
             "assetType": "runtime",
             "rid": "win"
           }
@@ -1692,6 +1823,9 @@
         },
         "compile": {
           "ref/netstandard1.3/System.Text.Encoding.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+win8+wp8+wpa81/_._": {}
         }
       },
       "System.Text.Encoding.CodePages/4.0.1": {
@@ -1730,6 +1864,9 @@
         },
         "compile": {
           "ref/netstandard1.3/System.Text.Encoding.Extensions.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+win8+wp8+wpa81/_._": {}
         }
       },
       "System.Text.RegularExpressions/4.1.0": {
@@ -1759,7 +1896,7 @@
           "ref/netstandard1.3/System.Threading.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.3/_._": {}
+          "lib/netstandard1.3/System.Threading.dll": {}
         }
       },
       "System.Threading.Overlapped/4.0.1": {
@@ -1789,6 +1926,9 @@
         },
         "compile": {
           "ref/netstandard1.3/System.Threading.Tasks.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+win8+wp8+wpa81/_._": {}
         }
       },
       "System.Threading.Tasks.Dataflow/4.6.0": {
@@ -2013,6 +2153,140 @@
         "runtimes/win7-x86/native/libuv.dll"
       ]
     },
+    "Microsoft.AspNet.WebApi.Client/5.2.3": {
+      "sha512": "3kiI8peSXbXHDDrRuo+QaX0iCEVRe0nvn2dBDRw656uPX32UalbBlSIDUDlJxu05eau4tnuhsikiUuugvvoUoQ==",
+      "type": "package",
+      "path": "Microsoft.AspNet.WebApi.Client/5.2.3",
+      "files": [
+        "Microsoft.AspNet.WebApi.Client.5.2.3.nupkg.sha512",
+        "Microsoft.AspNet.WebApi.Client.nuspec",
+        "lib/net45/System.Net.Http.Formatting.dll",
+        "lib/net45/System.Net.Http.Formatting.xml",
+        "lib/portable-wp8+netcore45+net45+wp81+wpa81/System.Net.Http.Formatting.dll",
+        "lib/portable-wp8+netcore45+net45+wp81+wpa81/System.Net.Http.Formatting.xml"
+      ]
+    },
+    "Microsoft.Bcl/1.1.9": {
+      "sha512": "USQ55innJy8K+tAXvVa1O8dUTp2s7pmJ5cJj6Tl02HtGc2xBDj0P2QH5620HbGXIWKWYhydoeQF8Rm/JRDBGhw==",
+      "type": "package",
+      "path": "Microsoft.Bcl/1.1.9",
+      "files": [
+        "License-Stable.rtf",
+        "Microsoft.Bcl.1.1.9.nupkg.sha512",
+        "Microsoft.Bcl.nuspec",
+        "content/monoandroid/_._",
+        "content/monotouch/_._",
+        "content/net45/_._",
+        "content/portable-net45+win8+wp8+wpa81/_._",
+        "content/portable-net45+win8+wpa81/_._",
+        "content/portable-net451+win81+wpa81/_._",
+        "content/portable-net451+win81/_._",
+        "content/portable-win81+wp81+wpa81/_._",
+        "content/sl4/_._",
+        "content/sl5/_._",
+        "content/win8/_._",
+        "content/wp8/_._",
+        "content/wpa81/_._",
+        "lib/monoandroid/_._",
+        "lib/monotouch/_._",
+        "lib/net40/System.IO.dll",
+        "lib/net40/System.IO.xml",
+        "lib/net40/System.Runtime.dll",
+        "lib/net40/System.Runtime.xml",
+        "lib/net40/System.Threading.Tasks.dll",
+        "lib/net40/System.Threading.Tasks.xml",
+        "lib/net40/ensureRedirect.xml",
+        "lib/net45/_._",
+        "lib/portable-net40+sl4+win8+wp71+wpa81/System.IO.dll",
+        "lib/portable-net40+sl4+win8+wp71+wpa81/System.IO.xml",
+        "lib/portable-net40+sl4+win8+wp71+wpa81/System.Runtime.dll",
+        "lib/portable-net40+sl4+win8+wp71+wpa81/System.Runtime.xml",
+        "lib/portable-net40+sl4+win8+wp71+wpa81/System.Threading.Tasks.dll",
+        "lib/portable-net40+sl4+win8+wp71+wpa81/System.Threading.Tasks.xml",
+        "lib/portable-net40+sl4+win8+wp71+wpa81/ensureRedirect.xml",
+        "lib/portable-net40+sl4+win8+wp8+wpa81/System.IO.dll",
+        "lib/portable-net40+sl4+win8+wp8+wpa81/System.IO.xml",
+        "lib/portable-net40+sl4+win8+wp8+wpa81/System.Runtime.dll",
+        "lib/portable-net40+sl4+win8+wp8+wpa81/System.Runtime.xml",
+        "lib/portable-net40+sl4+win8+wp8+wpa81/System.Threading.Tasks.dll",
+        "lib/portable-net40+sl4+win8+wp8+wpa81/System.Threading.Tasks.xml",
+        "lib/portable-net40+sl4+win8+wp8+wpa81/ensureRedirect.xml",
+        "lib/portable-net40+sl4+win8/System.IO.dll",
+        "lib/portable-net40+sl4+win8/System.IO.xml",
+        "lib/portable-net40+sl4+win8/System.Runtime.dll",
+        "lib/portable-net40+sl4+win8/System.Runtime.xml",
+        "lib/portable-net40+sl4+win8/System.Threading.Tasks.dll",
+        "lib/portable-net40+sl4+win8/System.Threading.Tasks.xml",
+        "lib/portable-net40+sl4+win8/ensureRedirect.xml",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/System.IO.dll",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/System.IO.xml",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/System.Runtime.dll",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/System.Runtime.xml",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/System.Threading.Tasks.dll",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/System.Threading.Tasks.xml",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/ensureRedirect.xml",
+        "lib/portable-net40+win8+wp8+wpa81/System.IO.dll",
+        "lib/portable-net40+win8+wp8+wpa81/System.IO.xml",
+        "lib/portable-net40+win8+wp8+wpa81/System.Runtime.dll",
+        "lib/portable-net40+win8+wp8+wpa81/System.Runtime.xml",
+        "lib/portable-net40+win8+wp8+wpa81/System.Threading.Tasks.dll",
+        "lib/portable-net40+win8+wp8+wpa81/System.Threading.Tasks.xml",
+        "lib/portable-net40+win8+wp8+wpa81/ensureRedirect.xml",
+        "lib/portable-net40+win8/System.IO.dll",
+        "lib/portable-net40+win8/System.IO.xml",
+        "lib/portable-net40+win8/System.Runtime.dll",
+        "lib/portable-net40+win8/System.Runtime.xml",
+        "lib/portable-net40+win8/System.Threading.Tasks.dll",
+        "lib/portable-net40+win8/System.Threading.Tasks.xml",
+        "lib/portable-net40+win8/ensureRedirect.xml",
+        "lib/portable-net45+win8+wp8+wpa81/_._",
+        "lib/portable-net45+win8+wpa81/_._",
+        "lib/portable-net451+win81+wpa81/_._",
+        "lib/portable-net451+win81/_._",
+        "lib/portable-win81+wp81+wpa81/_._",
+        "lib/sl4-windowsphone71/System.IO.dll",
+        "lib/sl4-windowsphone71/System.IO.xml",
+        "lib/sl4-windowsphone71/System.Runtime.dll",
+        "lib/sl4-windowsphone71/System.Runtime.xml",
+        "lib/sl4-windowsphone71/System.Threading.Tasks.dll",
+        "lib/sl4-windowsphone71/System.Threading.Tasks.xml",
+        "lib/sl4-windowsphone71/ensureRedirect.xml",
+        "lib/sl4/System.IO.dll",
+        "lib/sl4/System.IO.xml",
+        "lib/sl4/System.Runtime.dll",
+        "lib/sl4/System.Runtime.xml",
+        "lib/sl4/System.Threading.Tasks.dll",
+        "lib/sl4/System.Threading.Tasks.xml",
+        "lib/sl5/System.IO.dll",
+        "lib/sl5/System.IO.xml",
+        "lib/sl5/System.Runtime.dll",
+        "lib/sl5/System.Runtime.xml",
+        "lib/sl5/System.Threading.Tasks.dll",
+        "lib/sl5/System.Threading.Tasks.xml",
+        "lib/win8/_._",
+        "lib/wp8/_._",
+        "lib/wpa81/_._"
+      ]
+    },
+    "Microsoft.Bcl.Build/1.0.14": {
+      "sha512": "cDLKSvNvRa519hplsbSoYqO69TjdDIhfjtKUM0g20/nVROoWsGav9KCI9HtnGjLmdV1+TcUUDhbotcllibjPEA==",
+      "type": "package",
+      "path": "Microsoft.Bcl.Build/1.0.14",
+      "files": [
+        "License-Stable.rtf",
+        "Microsoft.Bcl.Build.1.0.14.nupkg.sha512",
+        "Microsoft.Bcl.Build.nuspec",
+        "content/net40/_._",
+        "content/netcore45/_._",
+        "content/portable-net40+win8+sl4+wp71+wpa81/_._",
+        "content/sl4-windowsphone71/_._",
+        "content/sl4/_._",
+        "tools/Install.ps1",
+        "tools/Microsoft.Bcl.Build.Tasks.dll",
+        "tools/Microsoft.Bcl.Build.targets",
+        "tools/Uninstall.ps1"
+      ]
+    },
     "Microsoft.CodeAnalysis.Analyzers/1.1.0": {
       "sha512": "HS3iRWZKcUw/8eZ/08GXKY2Bn7xNzQPzf8gRPHGSowX7u7XXu9i9YEaBeBNKUXWfI7qjvT2zXtLUvbN0hds8vg==",
       "type": "package",
@@ -2132,6 +2406,69 @@
         "ref/xamarinmac20/_._",
         "ref/xamarintvos10/_._",
         "ref/xamarinwatchos10/_._"
+      ]
+    },
+    "Microsoft.Net.Http/2.2.22": {
+      "sha512": "bqVLJ2UimlAEs2bn3y28lB1pmFRxuysv9pFyB0A86WEMYGYTfDyfjAGjm0fiaSRjlMNU1jVnp8Mxt8qe4OmpXQ==",
+      "type": "package",
+      "path": "Microsoft.Net.Http/2.2.22",
+      "files": [
+        "License-Stable.rtf",
+        "Microsoft.Net.Http.2.2.22.nupkg.sha512",
+        "Microsoft.Net.Http.nuspec",
+        "lib/monoandroid/System.Net.Http.Extensions.XML",
+        "lib/monoandroid/System.Net.Http.Extensions.dll",
+        "lib/monoandroid/System.Net.Http.Primitives.dll",
+        "lib/monoandroid/System.Net.Http.Primitives.xml",
+        "lib/monotouch/System.Net.Http.Extensions.XML",
+        "lib/monotouch/System.Net.Http.Extensions.dll",
+        "lib/monotouch/System.Net.Http.Primitives.dll",
+        "lib/monotouch/System.Net.Http.Primitives.xml",
+        "lib/net40/System.Net.Http.Extensions.XML",
+        "lib/net40/System.Net.Http.Extensions.dll",
+        "lib/net40/System.Net.Http.Primitives.dll",
+        "lib/net40/System.Net.Http.Primitives.xml",
+        "lib/net40/System.Net.Http.WebRequest.dll",
+        "lib/net40/System.Net.Http.WebRequest.xml",
+        "lib/net40/System.Net.Http.dll",
+        "lib/net40/System.Net.Http.xml",
+        "lib/net40/ensureRedirect.xml",
+        "lib/net45/System.Net.Http.Extensions.XML",
+        "lib/net45/System.Net.Http.Extensions.dll",
+        "lib/net45/System.Net.Http.Primitives.dll",
+        "lib/net45/System.Net.Http.Primitives.xml",
+        "lib/net45/ensureRedirect.xml",
+        "lib/portable-net40+sl4+win8+wp71+wpa81/System.Net.Http.Extensions.XML",
+        "lib/portable-net40+sl4+win8+wp71+wpa81/System.Net.Http.Extensions.dll",
+        "lib/portable-net40+sl4+win8+wp71+wpa81/System.Net.Http.Primitives.XML",
+        "lib/portable-net40+sl4+win8+wp71+wpa81/System.Net.Http.Primitives.dll",
+        "lib/portable-net40+sl4+win8+wp71+wpa81/System.Net.Http.dll",
+        "lib/portable-net40+sl4+win8+wp71+wpa81/System.Net.Http.xml",
+        "lib/portable-net40+sl4+win8+wp71+wpa81/ensureRedirect.xml",
+        "lib/portable-net45+win8+wpa81/System.Net.Http.Extensions.XML",
+        "lib/portable-net45+win8+wpa81/System.Net.Http.Extensions.dll",
+        "lib/portable-net45+win8+wpa81/System.Net.Http.Primitives.dll",
+        "lib/portable-net45+win8+wpa81/System.Net.Http.Primitives.xml",
+        "lib/portable-net45+win8+wpa81/ensureRedirect.xml",
+        "lib/portable-net45+win8/System.Net.Http.Extensions.XML",
+        "lib/portable-net45+win8/System.Net.Http.Extensions.dll",
+        "lib/portable-net45+win8/System.Net.Http.Primitives.dll",
+        "lib/portable-net45+win8/System.Net.Http.Primitives.xml",
+        "lib/portable-net45+win8/ensureRedirect.xml",
+        "lib/sl4-windowsphone71/System.Net.Http.Extensions.XML",
+        "lib/sl4-windowsphone71/System.Net.Http.Extensions.dll",
+        "lib/sl4-windowsphone71/System.Net.Http.Primitives.XML",
+        "lib/sl4-windowsphone71/System.Net.Http.Primitives.dll",
+        "lib/sl4-windowsphone71/System.Net.Http.dll",
+        "lib/sl4-windowsphone71/System.Net.Http.xml",
+        "lib/win8/System.Net.Http.Extensions.XML",
+        "lib/win8/System.Net.Http.Extensions.dll",
+        "lib/win8/System.Net.Http.Primitives.dll",
+        "lib/win8/System.Net.Http.Primitives.xml",
+        "lib/wpa81/System.Net.Http.Extensions.XML",
+        "lib/wpa81/System.Net.Http.Extensions.dll",
+        "lib/wpa81/System.Net.Http.Primitives.dll",
+        "lib/wpa81/System.Net.Http.Primitives.xml"
       ]
     },
     "Microsoft.NETCore.App/1.0.1": {
@@ -2360,6 +2697,30 @@
         "NETStandard.Library.nuspec",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt"
+      ]
+    },
+    "Newtonsoft.Json/6.0.4": {
+      "sha512": "FyQLmEpjsCrEP+znauLDGAi+h6i9YnaMkITlfIoiM4RYyX3nki306bTHsr/0okiIvIc7BJhQTbOAIZVocccFUw==",
+      "type": "package",
+      "path": "Newtonsoft.Json/6.0.4",
+      "files": [
+        "Newtonsoft.Json.6.0.4.nupkg.sha512",
+        "Newtonsoft.Json.nuspec",
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/netcore45/Newtonsoft.Json.dll",
+        "lib/netcore45/Newtonsoft.Json.xml",
+        "lib/portable-net40+sl5+wp80+win8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net40+sl5+wp80+win8+wpa81/Newtonsoft.Json.xml",
+        "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.xml",
+        "tools/install.ps1"
       ]
     },
     "runtime.native.System/4.0.0": {
@@ -6588,7 +6949,10 @@
     }
   },
   "projectFileDependencyGroups": {
-    "": [],
+    "": [
+      "Microsoft.AspNet.WebApi.Client >= 5.2.3",
+      "System.Net.Http >= 4.1.0"
+    ],
     ".NETCoreApp,Version=v1.0": [
       "Microsoft.NETCore.App >= 1.0.1"
     ]
