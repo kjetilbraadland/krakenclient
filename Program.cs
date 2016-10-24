@@ -16,63 +16,64 @@ namespace ConsoleApplication
             cons.DefaultRequestHeaders.Accept.Clear();
             cons.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
 
-            //MyAPIGet(cons).Wait();
-            GetApiCallAsync(cons).Wait();
+            CreateAsync(cons).Wait();
+            GetApiCallAsync(cons).Wait();            
 
         }
-
-
-        // static async Task MyAPIGet(HttpClient cons)
-        // {
-        //     using (cons)
-        //     {
-        //         HttpResponseMessage res = await cons.GetAsync("api/Kraken/GetById/22a877aa-c291-4ba8-88be-634bd181bb94");
-        //         res.EnsureSuccessStatusCode();
-        //         if (res.IsSuccessStatusCode)
-        //         {
-        //             try
-        //             {
-        //                 Item item = await res.Content.ReadAsAsync<Item>();
-        //                 Console.WriteLine("\n");
-        //                 Console.WriteLine("---------------------Calling Get Operation------------------------");
-        //                 Console.WriteLine("\n");
-        //                 Console.WriteLine("ItemId    Name          ReservedBy");
-        //                 Console.WriteLine("-----------------------------------------------------------");
-        //                 Console.WriteLine("{0}\t{1}\t\t{2}", item.ItemId, item.Name, item.ReservedBy);
-        //                 Console.ReadLine();
-        //             }
-        //             catch (Exception ex)
-        //             {
-
-        //             }
-        //         }
-        //     }
-        // }
+      
 
         public static async Task GetApiCallAsync(HttpClient cons)
         {
             using (cons)
             {
-                var response = await cons.GetStringAsync("api/Kraken/GetById/22a877aa-c291-4ba8-88be-634bd181bb94");
-
-                if (response != null)
+                try
                 {
-                    try
+                    var response = await cons.GetStringAsync("api/Kraken/GetById/22a877aa-c291-4ba8-88be-634bd181bb94");
+
+                    if (response != null)
                     {
-                        var item = JsonConvert.DeserializeObject<Item>(response);
+
+                        var item = JsonConvert.DeserializeObject<Job>(response);
                         Console.WriteLine("\n");
                         Console.WriteLine("---------------------Calling Get Operation------------------------");
                         Console.WriteLine("\n");
                         Console.WriteLine("ItemId    Name          ReservedBy");
                         Console.WriteLine("-----------------------------------------------------------");
-                        Console.WriteLine("{0}\t{1}\t\t{2}", item.ItemId, item.Name, item.ReservedBy);
-                        
-                    }
-                    catch (Exception ex)
-                    {
-
+                        Console.WriteLine("{0}\t{1}\t\t{2}", item.JobId, item.Name, item.ReservedBy);
                     }
                 }
+                catch (System.Net.Http.HttpRequestException hrex)
+                {
+                    Console.WriteLine(hrex.Message);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.StackTrace);
+                }
+
+            }
+        }
+
+        public static async Task CreateAsync(HttpClient cons)
+        {
+            using (cons)
+            {
+                try
+                {
+                    var job = new Job() { Name = "lala" };
+
+                    StringContent cont = new StringContent(JsonConvert.SerializeObject(job));
+                    var response = await cons.PostAsync("api/Kraken/Create", cont);
+                }
+                catch (System.Net.Http.HttpRequestException hrex)
+                {
+                    Console.WriteLine(hrex.Message);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.StackTrace);
+                }
+
             }
         }
     }
